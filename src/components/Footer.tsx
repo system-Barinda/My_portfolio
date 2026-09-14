@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { profile } from "../data/portfolio";
 
 export default function Footer() {
@@ -21,10 +21,10 @@ export default function Footer() {
           <MapPin size={15} /> Rwanda
         </span>
         <a href="#">
-          <Linkedin size={15} /> LinkedIn
+           LinkedIn
         </a>
         <a href="#">
-          <Github size={15} /> GitHub
+        GitHub
         </a>
       </div>
     </footer>

@@ -1,3 +1,53 @@
-import {User,FolderKanban,Code2,Briefcase,Mail,Home,ChevronRight} from "lucide-react";
-const items=[["home","Home",Home],["about","About",User],["projects","Projects",FolderKanban],["skills","Skills",Code2],["experience","Experience",Briefcase],["contact","Contact",Mail]];
-export default function Sidebar({page,setPage}:{page:string,setPage:(p:string)=>void}){return <aside className="sidebar"><div className="brand"><div className="brand-mark">SB</div><div><strong>System Sylvere</strong><small>Software Engineer</small></div></div><nav>{items.map(([id,label,Icon])=><button key={id} className={page===id?"nav active":"nav"} onClick={()=>setPage(id)}><Icon size={18}/><span>{label}</span>{page===id&&<ChevronRight size={15}/>}</button>)}</nav><div className="side-bottom"><span>Available for opportunities</span><i/></div></aside>}
+import {
+  User,
+  FolderKanban,
+  Code2,
+  Briefcase,
+  Mail,
+  Home,
+  ChevronRight,
+} from "lucide-react";
+const items = [
+  ["home", "Home", Home],
+  ["about", "About", User],
+  ["projects", "Projects", FolderKanban],
+  ["skills", "Skills", Code2],
+  ["experience", "Experience", Briefcase],
+  ["contact", "Contact", Mail],
+];
+export default function Sidebar({
+  page,
+  setPage,
+}: {
+  page: string;
+  setPage: (p: string) => void;
+}) {
+  return (
+    <aside className="sidebar">
+      <div className="brand">
+        <div className="brand-mark">SB</div>
+        <div>
+          <strong>System Sylvere</strong>
+          <small>Software Engineer</small>
+        </div>
+      </div>
+      <nav>
+        {items.map(([id, label, Icon]) => (
+          <button
+            key={id}
+            className={page === id ? "nav active" : "nav"}
+            onClick={() => setPage(id)}
+          >
+            <Icon size={18} />
+            <span>{label}</span>
+            {page === id && <ChevronRight size={15} />}
+          </button>
+        ))}
+      </nav>
+      <div className="side-bottom">
+        <span>Available for opportunities</span>
+        <i />
+      </div>
+    </aside>
+  );
+}
