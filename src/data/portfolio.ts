@@ -1,73 +1,52 @@
 export const profile = {
-  name: "System Sylvere Barinda",
-  role: "Software Engineer",
-  location: "Rwanda",
-  education: "IT — RP-Tumba College",
-  email: "your.email@example.com",
-  phone: "+250 7XX XXX XXX",
-  summary:
-    "Software Engineer focused on backend engineering, APIs, testing and clean, maintainable software. I enjoy turning real problems into practical digital products.",
+  name: 'System Sylvere Barinda',
+  role: 'Software Engineer',
+  location: 'Rwanda',
+  email: 'your.email@example.com',
+  phone: '+250 7XX XXX XXX',
+  availability: 'Open to software engineering opportunities',
+  bio: 'I build practical, reliable software with a strong focus on backend engineering, APIs, testing, clean architecture, and user experience.',
+  education: 'IT — RP-Tumba College',
+  github: 'https://github.com/',
+  linkedin: 'https://www.linkedin.com/',
 };
+
+export const skills = [
+  'TypeScript', 'JavaScript', 'React', 'Vite', 'Tailwind CSS', 'Node.js',
+  'NestJS', 'REST APIs', 'PostgreSQL', 'Git & GitHub', 'Testing', 'Clean Architecture',
+];
+
 export const projects = [
   {
-    id: "road-master",
-    title: "Road Master",
-    category: "Educational Game",
-    description:
-      "A 2D road-safety game where players control speed, follow traffic signs and lights, and make safe decisions under pressure.",
-    stack: ["HTML", "CSS", "JavaScript", "Web Audio API"],
-    impact: "Turns road-safety rules into interactive practice.",
-    github: "#",
-    demo: "#",
+    id: 'road-master',
+    number: '01',
+    title: 'Road Master',
+    type: 'Educational 2D Game',
+    description: 'An interactive road-safety game where players make decisions under pressure by controlling speed, traffic signs and lights, and avoiding collisions.',
+    impact: 'Turns road-safety learning into an interactive experience.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Web Audio API'],
+    github: 'https://github.com/',
+    demo: '#',
   },
   {
-    id: "monishare",
-    title: "MoniShare",
-    category: "Backend Platform",
-    description:
-      "A car-sharing backend designed with modular architecture, authentication, role-based access, validation, testing and clean API design.",
-    stack: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
-    impact:
-      "Demonstrates production-minded API and backend engineering skills.",
-    github: "#",
-    demo: "#",
+    id: 'monishare',
+    number: '02',
+    title: 'MoniShare',
+    type: 'Car Sharing Backend',
+    description: 'A backend platform for car sharing with authentication, role-based access control, cars, bookings, validation, tests, and clean API design.',
+    impact: 'Demonstrates production-oriented backend engineering and API design.',
+    stack: ['TypeScript', 'NestJS', 'PostgreSQL', 'Docker', 'Jest'],
+    github: 'https://github.com/',
+    demo: '#',
   },
 ];
-export const skills = [
-  "React",
-  "TypeScript",
-  "Vite",
-  "JavaScript",
-  "NestJS",
-  "Node.js",
-  "REST APIs",
-  "PostgreSQL",
-  "Docker",
-  "Jest",
-  "Git",
-  "Clean Architecture",
-];
+
 export const experience = [
-  {
-    period: "TheGym — Software Engineering",
-    text: "Built software in a team environment, practiced communication, code reviews, testing, Git workflows and backend/API development.",
-  },
-  {
-    period: "RP-Tumba College",
-    text: "Studied Information Technology and developed a foundation in programming, databases, web development and software engineering.",
-  },
+  { period: 'Training', title: 'Software Engineering — TheGym', detail: 'Hands-on software engineering training focused on communication, fundamentals, teamwork, backend development, APIs, testing, and professional delivery.' },
+  { period: 'Education', title: 'Information Technology — RP-Tumba College', detail: 'Built a foundation in information technology and developed practical interest in software engineering.' },
 ];
+
 export const testimonials = [
-  {
-    name: "Professional Reference 01",
-    role: "Project / Team Collaborator",
-    quote:
-      "System is a committed learner who takes feedback seriously and works to deliver practical software.",
-  },
-  {
-    name: "Professional Reference 02",
-    role: "Team / Mentor",
-    quote:
-      "He communicates clearly, keeps improving his engineering skills and contributes positively to team projects.",
-  },
+  { quote: 'System is curious, collaborative, and serious about improving his engineering skills.', name: 'Professional Reference', role: 'Mentor / Coach' },
+  { quote: 'A reliable teammate who keeps learning and contributes to getting work completed.', name: 'Team Reference', role: 'Project Teammate' },
 ];
