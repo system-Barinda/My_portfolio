@@ -53,7 +53,7 @@ function App() {
   };
 
   return (
-    <main className="h-full min-h-screen bg-ink text-black md:p-4">
+    <main className="h-full min-h-screen bg-blue-600 text-black md:p-4">
       <div className="mx-auto flex h-full max-w-[1500px] flex-col overflow-hidden bg-white shadow-2xl md:flex-row md:rounded-2xl md:border md:border-black/10">
         <Sidebar
           active={active}
@@ -107,7 +107,7 @@ function Sidebar({
   return (
     <>
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-[300px] border-r border-black/10 bg-black text-white shadow-2xl transition-transform duration-300 md:relative md:flex md:w-[300px] md:translate-x-0 md:flex-col md:shadow-none ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed inset-y-0 left-0 z-50 w-[300px] border-r border-gray-600 bg-gray-300 text-black shadow-2xl transition-transform duration-300 md:relative md:flex md:w-[300px] md:translate-x-0 md:flex-col md:shadow-none ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex h-full flex-col p-6">
           <div className="mb-10 flex items-start justify-between">
@@ -120,7 +120,7 @@ function Sidebar({
                 <br />
                 Barinda
               </p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-900">
                 Software Engineer
               </p>
             </button>
