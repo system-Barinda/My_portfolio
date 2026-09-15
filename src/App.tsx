@@ -244,12 +244,12 @@ function HomePage({ onSelect }: { onSelect: (s: Section) => void }) {
       title="I build software that solves real problems."
     >
       <div className="grid h-full gap-5 lg:grid-cols-[1.4fr_.6fr]">
-        <div className="flex flex-col justify-between rounded-2xl border border-black bg-white p-6 text-white shadow-xl md:p-9">
+        <div className="flex flex-col justify-between rounded-2xl border border-gray-400 bg-white p-6 text-white shadow-xl md:p-9">
           <div>
             <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black">
               SB
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-white/75 md:text-xl">
+            <p className="max-w-2xl text-lg leading-8 text-black/75 md:text-xl">
               {profile.bio}
             </p>
           </div>
@@ -262,7 +262,7 @@ function HomePage({ onSelect }: { onSelect: (s: Section) => void }) {
             </button>
             <button
               onClick={() => onSelect("contact")}
-              className="rounded-xl border border-white/15 px-5 py-3 text-sm font-black hover:bg-white/10"
+              className=" text-black/75 rounded-xl border border-gray-400 px-5 py-3 text-sm font-black hover:bg-gray-200"
             >
               Let's talk
             </button>
