@@ -138,7 +138,7 @@ function Sidebar({
               <button
                 key={id}
                 onClick={() => onSelect(id)}
-                className={`group flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-bold transition ${active === id ? "bg-blue-600 text-white" : "text-white/65 hover:bg-white/10 hover:text-white"}`}
+                className={`group flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-bold transition ${active === id ? "bg-blue-600 text-white" : "text-slate-900 hover:bg-white/10 hover:text-white"}`}
               >
                 <span className="flex items-center gap-3">
                   <Icon size={17} /> {label}
@@ -151,9 +151,9 @@ function Sidebar({
             ))}
           </nav>
 
-          <div className="mt-auto space-y-4 border-t border-white/10 pt-5">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+          <div className="mt-auto space-y-4 border-t border-gray-600 pt-5">
+            <div className="rounded-xl border border-gray-600 bg-white/5 p-4">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-700">
                 Availability
               </p>
               <div className="mt-2 flex items-center gap-2 text-xs font-semibold">
@@ -166,17 +166,17 @@ function Sidebar({
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg border border-white/10 p-2.5 hover:bg-white/10"
+                className="rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
               ></a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg border border-white/10 p-2.5 hover:bg-white/10"
+                className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
               ></a>
               <a
                 href={`mailto:${profile.email}`}
-                className="rounded-lg border border-white/10 p-2.5 hover:bg-white/10"
+                className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
               >
                 <Mail size={16} />
               </a>
