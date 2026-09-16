@@ -307,14 +307,8 @@ function AboutPage() {
     <Page eyebrow="01 / About" title="A developer who keeps learning.">
       <div className="grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
         <div className="rounded-2xl border border-black/10 p-6 shadow-sm md:p-8">
-          <p className="text-base leading-8 text-black/65">
-            My path into software engineering started with Information
-            Technology at{" "}
-            <strong className="text-black">RP-Tumba College</strong>. Through
-            hands-on engineering training and team projects, I developed a
-            practical mindset: understand the problem, design clearly, build
-            carefully, test the result, and keep improving.
-          </p>
+          <p className="text-base leading-8 text-black/65"> My journey into software engineering started with software development studies at <strong className="text-black">TSS-Mutovu</strong>, where I discovered my passion for technology and learned the fundamentals of building software. I continued developing my knowledge through Information Technology at <strong className="text-black">RP-Tumba College</strong>, where I strengthened my technical foundation through practical learning and hands-on projects. </p>
+          <p className="mt-5 text-base leading-8 text-black/65"> I also had the opportunity to train in software engineering through <strong className="text-black"> TheGym Rwanda</strong>. This experience helped me move beyond learning concepts and develop a real engineering mindset. I learned how to design and build reliable <strong className="text-black"> backend and frontend applications</strong>, create APIs, work with databases, implement authentication and authorization, write automated tests, and structure applications using clean and maintainable code. </p>
           <p className="mt-5 text-base leading-8 text-black/65">
             I enjoy backend development, API design, authentication and
             authorization, databases, automated testing, and building interfaces
@@ -622,7 +616,7 @@ function Footer({ onSelect }: { onSelect: (s: Section) => void }) {
       <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-black/45">
         <span>© {new Date().getFullYear()} System Sylvere Barinda</span>
       </div>
-      <div className="hidden items-center gap-5 text-[10px] font-black uppercase tracking-wider md:flex">
+      <div className="hidden items-center gap-5 text-[10px] text-slate-900 font-bold uppercase tracking-wider md:flex">
         <button
           onClick={() => onSelect("about")}
           className="hover:text-blue-600"
