@@ -249,9 +249,16 @@ function HomePage({ onSelect }: { onSelect: (s: Section) => void }) {
             <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black">
               SB
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-slate-800 md:text-xl">
+            <p className="max-w-2xl leading-8 text-slate-800 md:text-[20px]">
               {profile.bio}
             </p>
+             <p className="mt-5 max-w-2xl  leading-8 text-slate-800 md:text-[20px]">
+              {profile.bio_1}
+            </p>
+            <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-800 md:text-[20px]">
+              {profile.bio_2}
+            </p>
+
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
