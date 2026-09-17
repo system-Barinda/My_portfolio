@@ -304,79 +304,47 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 
-
 function ProfileImageSlider() {
   const images = [
-    "/images/barinda.jpg",
     "/images/barinda_1.jpg",
+    "/images/barinda.jpg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((current) => (current + 1) % images.length);
-    }, 300000); // 5 minutes
+      setCurrentImage((previous) => (previous + 1) % images.length);
+    }, 5000); // Changes every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
-  const nextImage = () => {
-    setCurrentImage((current) => (current + 1) % images.length);
-  };
-
-  const previousImage = () => {
-    setCurrentImage(
-      (current) => (current - 1 + images.length) % images.length
-    );
-  };
-
   return (
     <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-sm">
-      <div className="relative aspect-[16/9] w-full overflow-hidden">
+      <div className="relative aspect-[16/9] w-full">
         {images.map((image, index) => (
           <img
             key={image}
             src={image}
-            alt={`System Sylvere Barinda - profile ${index + 1}`}
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-              currentImage === index ? "opacity-100" : "opacity-0"
+            alt={`System Sylvere Barinda profile ${index + 1}`}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+              currentImage === index
+                ? "opacity-100"
+                : "opacity-0"
             }`}
           />
         ))}
 
-        {/* Previous button */}
-        <button
-          type="button"
-          onClick={previousImage}
-          aria-label="Previous image"
-          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-black shadow-md transition hover:bg-white"
-        >
-          <ChevronLeft size={18} />
-        </button>
-
-        {/* Next button */}
-        <button
-          type="button"
-          onClick={nextImage}
-          aria-label="Next image"
-          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-black shadow-md transition hover:bg-white"
-        >
-          <ChevronRight size={18} />
-        </button>
-
-        {/* Image indicators */}
+        {/* Small slide indicators */}
         <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
           {images.map((_, index) => (
-            <button
+            <span
               key={index}
-              type="button"
-              onClick={() => setCurrentImage(index)}
-              aria-label={`Show image ${index + 1}`}
-              className={`h-2 w-2 rounded-full transition-all ${
+              className={`h-2 rounded-full transition-all duration-500 ${
                 currentImage === index
                   ? "w-6 bg-blue-500"
-                  : "bg-white/80"
+                  : "w-2 bg-white/80"
               }`}
             />
           ))}
@@ -410,26 +378,40 @@ function AboutPage() {
             />
           </div>
         </div>
-        <div className="rounded-2xl bg-black p-6 text-white md:p-8">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-400">
-            What I bring
-          </p>
-          <div className="mt-7 space-y-5">
-            {[
-              "Curiosity and continuous learning",
-              "Team communication and ownership",
-              "Clean, testable implementation",
-              "Problem solving with a user mindset",
-            ].map((x) => (
-              <div key={x} className="flex gap-3 text-sm font-semibold">
-                <CheckCircle2 className="shrink-0 text-blue-500" size={18} />
-                {x}
-              </div>
-            ))}
-          </div>
-           {/* Your two profile images */}
-          <ProfileImageSlider />
+       <div className="space-y-6">
+
+  {/* What I Bring */}
+  <div className="rounded-2xl bg-black p-6 text-white md:p-8">
+    <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-400">
+      What I bring
+    </p>
+
+    <div className="mt-7 space-y-5">
+      {[
+        "Curiosity and continuous learning",
+        "Team communication and ownership",
+        "Clean, testable implementation",
+        "Problem solving with a user mindset",
+      ].map((x) => (
+        <div
+          key={x}
+          className="flex gap-3 text-sm font-semibold"
+        >
+          <CheckCircle2
+            className="shrink-0 text-blue-500"
+            size={18}
+          />
+
+          <span>{x}</span>
         </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Automatic Profile Image Slider */}
+  <ProfileImageSlider />
+
+</div>
       </div>
     </Page>
   );
