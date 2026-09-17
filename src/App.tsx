@@ -1,8 +1,9 @@
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import {
   ArrowUpRight,
   BriefcaseBusiness,
   CheckCircle2,
+  ChevronLeft,
   ChevronRight,
   Code2,
   Download,
@@ -302,6 +303,90 @@ function Stat({ value, label }: { value: string; label: string }) {
   );
 }
 
+
+
+function ProfileImageSlider() {
+  const images = [
+    "/images/barinda.jpg",
+    "/images/barinda_1.jpg",
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((current) => (current + 1) % images.length);
+    }, 300000); // 5 minutes
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextImage = () => {
+    setCurrentImage((current) => (current + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImage(
+      (current) => (current - 1 + images.length) % images.length
+    );
+  };
+
+  return (
+    <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-sm">
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
+        {images.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt={`System Sylvere Barinda - profile ${index + 1}`}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+              currentImage === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+
+        {/* Previous button */}
+        <button
+          type="button"
+          onClick={previousImage}
+          aria-label="Previous image"
+          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-black shadow-md transition hover:bg-white"
+        >
+          <ChevronLeft size={18} />
+        </button>
+
+        {/* Next button */}
+        <button
+          type="button"
+          onClick={nextImage}
+          aria-label="Next image"
+          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 text-black shadow-md transition hover:bg-white"
+        >
+          <ChevronRight size={18} />
+        </button>
+
+        {/* Image indicators */}
+        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setCurrentImage(index)}
+              aria-label={`Show image ${index + 1}`}
+              className={`h-2 w-2 rounded-full transition-all ${
+                currentImage === index
+                  ? "w-6 bg-blue-500"
+                  : "bg-white/80"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 function AboutPage() {
   return (
     <Page eyebrow="01 / About" title="A developer who keeps learning.">
@@ -342,6 +427,8 @@ function AboutPage() {
               </div>
             ))}
           </div>
+           {/* Your two profile images */}
+          <ProfileImageSlider />
         </div>
       </div>
     </Page>
