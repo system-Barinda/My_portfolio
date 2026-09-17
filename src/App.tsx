@@ -306,8 +306,8 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function ProfileImageSlider() {
   const images = [
-    "/images/barinda_1.jpg",
-    "/images/barinda.jpg",
+    "/images/barinda_1.jpeg",
+    "/images/barinda.jpeg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -315,7 +315,7 @@ function ProfileImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((previous) => (previous + 1) % images.length);
-    }, 5000); // Changes every 5 seconds
+    }, 500000); // Changes every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -403,10 +403,14 @@ function AboutPage() {
           />
 
           <span>{x}</span>
+        
         </div>
+
       ))}
+    
     </div>
   </div>
+  
 
   {/* Automatic Profile Image Slider */}
   <ProfileImageSlider />
