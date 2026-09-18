@@ -471,11 +471,11 @@ function ProjectsPage() {
               {p.impact}
             </p>
             <div className="mt-auto pt-6">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 ">
                 {p.stack.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full border border-black/10 px-3 py-1 text-[10px] font-black"
+                    className="rounded-full border border-black/10 px-3 py-1 text-[20px] font-black text-blue-400"
                   >
                     {s}
                   </span>
