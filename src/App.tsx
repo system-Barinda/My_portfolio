@@ -565,10 +565,10 @@ function SkillsPage() {
           {skills.map((skill, i) => (
             <div
               key={skill}
-              className={`rounded-xl border border-black/10 p-4 shadow-sm ${i % 4 === 0 ? "bg-black text-white" : "bg-white"}`}
+              className={`rounded-xl border border-black/10 p-4 shadow-sm ${i % 4 === 0 ? "bg-blue-600 text-white" : "bg-white"}`}
             >
               <p className="text-sm font-black">{skill}</p>
-              <p className="mt-2 text-[9px] font-bold uppercase tracking-wider opacity-40">
+              <p className="mt-2 text-[15px] font-bold uppercase tracking-wider opacity-60">
                 Skill {String(i + 1).padStart(2, "0")}
               </p>
             </div>
