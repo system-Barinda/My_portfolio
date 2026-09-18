@@ -588,8 +588,8 @@ function ContactPage() {
   return (
     <Page eyebrow="05 / Contact" title="Let's build something useful.">
       <div className="grid h-full gap-5 lg:grid-cols-[.7fr_1.3fr]">
-        <div className="rounded-2xl bg-black p-6 text-white md:p-7">
-          <p className="text-sm leading-7 text-white/60">
+        <div className="rounded-2xl bg-blue-600 p-6 text-white md:p-7">
+          <p className="text-sm leading-7 text-white/70">
             Have a project, opportunity, or idea? Send me a message and let's
             start a conversation.
           </p>
@@ -598,26 +598,26 @@ function ContactPage() {
               href={`mailto:${profile.email}`}
               className="flex items-center gap-3 text-sm font-bold hover:text-blue-400"
             >
-              <Mail className="text-blue-500" size={18} />
+              <Mail className="text-slate-900" size={18} />
               {profile.email}
             </a>
             <a
               href={`tel:${profile.phone}`}
               className="flex items-center gap-3 text-sm font-bold hover:text-blue-400"
             >
-              <Phone className="text-blue-500" size={18} />
+              <Phone className="text-slate-900" size={18} />
               {profile.phone}
             </a>
             <div className="flex items-center gap-3 text-sm font-bold">
-              <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue-600 text-[9px] font-black">
+              <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-slate-900 text-[9px] font-black">
                 RW
               </span>
               {profile.location}
             </div>
           </div>
-          <div className="mt-10 border-t border-white/10 pt-5 text-xs font-bold text-white/40">
-            Replace the placeholder contact details in{" "}
-            <code>src/data/portfolio.ts</code>.
+          <div className="mt-10 border-t border-white/10 pt-5 text-xs font-bold text-white/70">
+            
+            <code>SYSTEM SYLVERE BARINDA</code>.
           </div>
         </div>
         <form
