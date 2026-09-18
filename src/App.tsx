@@ -460,11 +460,11 @@ function ProjectsPage() {
                 className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
               />
             </div>
-            <h2 className="mt-8 text-2xl font-black">{p.title}</h2>
+            <h2 className="mt-8 text-2xl font-blue-600 text-blue-800 font-bold">{p.title}</h2>
             <p className="mt-1 text-xs font-black uppercase tracking-[0.18em] text-black/40">
               {p.type}
             </p>
-            <p className="mt-5 text-sm leading-7 text-black/65">
+            <p className="mt-5 text-sm leading-7  text-gray-900">
               {p.description}
             </p>
             <p className="mt-4 rounded-xl bg-blue-50 p-3 text-xs font-bold leading-5 text-blue-900">
@@ -486,13 +486,13 @@ function ProjectsPage() {
                   href={p.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-black px-4 py-2.5 text-xs font-black text-white"
+                  className="flex items-center gap-2 rounded-lg bg-blue-900 px-4 py-2.5 text-xs font-blue-900 text-white"
                 >
                   GitHub 
                 </a>
                 <a
                   href={p.demo}
-                  className="rounded-lg border border-black/15 px-4 py-2.5 text-xs font-black"
+                  className="rounded-lg border border-blue-900 px-4 py-2.5 text-xs font-blue-900 font-bold"
                 >
                   Live demo
                 </a>
