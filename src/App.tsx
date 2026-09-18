@@ -26,6 +26,7 @@ import {
   skills,
   testimonials,
 } from "./data/portfolio";
+import { ContactImage } from "./components/ContactImage";
 
 type Section =
   | "home"
@@ -619,6 +620,7 @@ function ContactPage() {
             
             <code>SYSTEM SYLVERE BARINDA</code>.
           </div>
+          <ContactImage />
         </div>
         <form
           onSubmit={submit}

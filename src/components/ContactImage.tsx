@@ -17,7 +17,7 @@ export function ContactImage() {
   }, []);
 
   return (
-    <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-sm">
+    <div className="mt-6 overflow-hidden rounded-2xl border border-black/10  shadow-sm">
       <div className="relative aspect-[16/9] w-full">
         {images.map((image, index) => (
           <img
