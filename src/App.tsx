@@ -140,7 +140,7 @@ function Sidebar({
               <button
                 key={id}
                 onClick={() => onSelect(id)}
-                className={`group flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-bold transition ${active === id ? "bg-blue-600 text-white" : "text-slate-900 hover:bg-white/10 hover:text-white"}`}
+                className={`group flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-bold transition ${active === id ? "bg-blue-600 text-white" : "text-slate-900 hover:bg-white/10 hover:text-blue-800"}`}
               >
                 <span className="flex items-center gap-3">
                   <Icon size={17} /> {label}
@@ -382,8 +382,8 @@ function AboutPage() {
        <div className="space-y-6">
 
   {/* What I Bring */}
-  <div className="rounded-2xl bg-black p-6 text-white md:p-8">
-    <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-400">
+  <div className="rounded-2xl bg-blue-600 p-6 text-white md:p-8">
+    <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-300">
       What I bring
     </p>
 
@@ -399,7 +399,7 @@ function AboutPage() {
           className="flex gap-3 text-sm font-semibold"
         >
           <CheckCircle2
-            className="shrink-0 text-blue-500"
+            className="shrink-0 text-blue-900"
             size={18}
           />
 
@@ -527,12 +527,12 @@ function ExperiencePage() {
             </div>
           ))}
         </div>
-        <div className="rounded-2xl bg-blue-900 p-6 text-white">
-          <MessageSquare size={20} className="text-blue-500" />
+        <div className="rounded-2xl bg-blue-600 p-6 text-white">
+          <MessageSquare size={20} className="text-blue-900" />
           <p className="mt-7 text-lg font-black leading-8 text-slate-200">
             “{testimonials[0].quote}”
           </p>
-          <p className="mt-5 text-xs font-bold text-white/45">
+          <p className="mt-5 text-xs font-bold text-white/55">
             {testimonials[0].name} · {testimonials[0].role}
           </p>
           <div className="my-7 border-t border-white/10" />
