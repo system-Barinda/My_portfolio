@@ -508,7 +508,7 @@ function ProjectsPage() {
 function ExperiencePage() {
   return (
     <Page eyebrow="03 / Experience" title="Learning through real delivery.">
-      <div className="grid h-full gap-5 lg:grid-cols-[1.1fr_.9fr]">
+      <div className="grid h-full gap-5 lg:grid-cols-[1.1fr_.9fr] text-slate-800">
         <div className="space-y-4">
           {experience.map((e) => (
             <div
@@ -526,16 +526,16 @@ function ExperiencePage() {
             </div>
           ))}
         </div>
-        <div className="rounded-2xl bg-black p-6 text-white">
+        <div className="rounded-2xl bg-blue-900 p-6 text-white">
           <MessageSquare size={20} className="text-blue-500" />
-          <p className="mt-7 text-lg font-black leading-8">
+          <p className="mt-7 text-lg font-black leading-8 text-slate-200">
             “{testimonials[0].quote}”
           </p>
           <p className="mt-5 text-xs font-bold text-white/45">
             {testimonials[0].name} · {testimonials[0].role}
           </p>
           <div className="my-7 border-t border-white/10" />
-          <p className="text-lg font-black leading-8">
+          <p className="text-lg font-black leading-8 text-slate-200">
             “{testimonials[1].quote}”
           </p>
           <p className="mt-5 text-xs font-bold text-white/45">
