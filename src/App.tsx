@@ -3,7 +3,6 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   CheckCircle2,
-  ChevronLeft,
   ChevronRight,
   Code2,
   Download,
@@ -11,22 +10,15 @@ import {
   Home,
   Mail,
   Menu,
-  MessageSquare,
-  Phone,
-  Send,
   Sparkles,
   UserRound,
   X,
   Zap,
 } from "lucide-react";
 import {
-  experience,
   profile,
-  projects,
-  skills,
-  testimonials,
+
 } from "./data/portfolio";
-import { ContactImage } from "./components/ContactImage";
 import ProjectsPage from "./components/ProjectsPage";
 import ExperiencePage from "./components/ExperiencePage";
 import SkillsPage from "./components/SkillsPage";
