@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data/portfolio";
-import Page from "./Page";
+import { Page } from "../App";
+
 
 export default function ProjectsPage() {
   return (

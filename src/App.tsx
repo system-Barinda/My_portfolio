@@ -27,6 +27,7 @@ import {
   testimonials,
 } from "./data/portfolio";
 import { ContactImage } from "./components/ContactImage";
+import ProjectsPage from "./components/ProjectsPage";
 
 type Section =
   | "home"
@@ -215,7 +216,7 @@ function Content({
   return <div className="h-full overflow-hidden">{pages[active]}</div>;
 }
 
-function Page({
+export function Page({
   eyebrow,
   title,
   children,
@@ -443,7 +444,7 @@ function Info({
   );
 }
 
-
+<ProjectsPage />
 
 function ExperiencePage() {
   return (
