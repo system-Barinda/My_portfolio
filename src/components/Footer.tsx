@@ -1,5 +1,6 @@
 import { Mail, Download } from "lucide-react";
 import { profile } from "../data/portfolio";
+import { Section } from "../App";
 
 export default function Footer({ onSelect }: { onSelect: (s: Section) => void }) {
   return (

@@ -25,7 +25,7 @@ import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
 
-type Section =
+export type Section =
   | "home"
   | "about"
   | "projects"
