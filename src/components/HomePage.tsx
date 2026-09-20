@@ -2,6 +2,15 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import { Section, Page } from "../App";
 import { profile } from "../data/portfolio";
 
+function Stat({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-md">
+      <p className="text-2xl font-black text-slate-900">{value}</p>
+      <p className="mt-1 text-sm text-slate-600">{label}</p>
+    </div>
+  );
+}
+
 export default function HomePage({ onSelect }: { onSelect: (s: Section) => void }) {
   return (
     <Page
