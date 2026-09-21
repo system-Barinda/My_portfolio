@@ -4,6 +4,29 @@ import { Page } from "../App";
 import { profile } from "../data/portfolio";
 import { ContactImage } from "./ContactImage";
 
+type FieldProps = {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+};
+
+function Field({ label, name, type = "text", required = false }: FieldProps) {
+  return (
+    <label className="block">
+      <span className="mb-2 block text-xs font-black uppercase tracking-wider">
+        {label}
+      </span>
+      <input
+        type={type}
+        name={name}
+        required={required}
+        className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-600/10"
+      />
+    </label>
+  );
+}
+
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
   const submit = (e: FormEvent<HTMLFormElement>) => {
@@ -34,7 +57,7 @@ export default function ContactPage() {
               {profile.phone}
             </a>
             <div className="flex items-center gap-3 text-sm font-bold">
-              <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-slate-900 text-[9px] font-black">
+              <span className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-slate-900 text-[9px] font-black">
                 RW
               </span>
               {profile.location}
