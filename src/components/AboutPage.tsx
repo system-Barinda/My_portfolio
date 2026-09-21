@@ -1,5 +1,5 @@
-import { GraduationCap, Code2, CheckCircle2, Info } from "lucide-react";
-import { Page } from "../App";
+import { GraduationCap, Code2, CheckCircle2 } from "lucide-react";
+import { Info, Page } from "../App";
 import { profile } from "../data/portfolio";
 import { useState, useEffect, type ReactNode } from "react";
 
