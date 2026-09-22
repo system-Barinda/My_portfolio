@@ -76,13 +76,13 @@ export default function Sidebar({
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
-              ></a>
+              ><Github size={16} /></a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
-              ></a>
+              ><Linkedin size={16} /></a>
               <a
                 href={`mailto:${profile.email}`}
                 className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
