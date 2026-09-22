@@ -1,4 +1,5 @@
 import { X, ChevronRight, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { nav, Section } from "../App";
 import { profile } from "../data/portfolio";
 
@@ -76,13 +77,13 @@ export default function Sidebar({
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
-              ><Github size={16} /></a>
+              ><FaGithub size={16} /></a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
-              ><Linkedin size={16} /></a>
+              > <FaLinkedin size={16} /></a>
               <a
                 href={`mailto:${profile.email}`}
                 className="text-gray-800 rounded-lg border border-gray-600 p-2.5 hover:bg-gray-600"
