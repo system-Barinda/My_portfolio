@@ -1,6 +1,13 @@
 import { Mail, Download } from "lucide-react";
 import { profile } from "../data/portfolio";
 import { Section } from "../App";
+import {
+  FaUser,
+  FaBriefcase,
+  FaAddressBook,
+  FaEnvelope,
+  FaDownload,
+} from "react-icons/fa";
 
 export default function Footer({ onSelect }: { onSelect: (s: Section) => void }) {
   return (
@@ -13,22 +20,23 @@ export default function Footer({ onSelect }: { onSelect: (s: Section) => void })
           onClick={() => onSelect("about")}
           className="hover:text-blue-600"
         >
-          About
+          <FaUser size={12} /> About
         </button>
         <button
           onClick={() => onSelect("projects")}
           className="hover:text-blue-600"
         >
-          Work
+          <FaBriefcase size={12} />Work
         </button>
         <button
           onClick={() => onSelect("contact")}
           className="hover:text-blue-600"
         >
-          Contact
+         <FaAddressBook size={12} /> Contact
         </button>
         <a
           href={`mailto:${profile.email}`}
+          
           className="flex items-center gap-1.5 hover:text-blue-600"
         >
           <Mail size={12} /> Email
