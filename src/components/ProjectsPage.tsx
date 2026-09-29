@@ -16,10 +16,10 @@ export default function ProjectsPage() {
               <span className="text-xs font-black text-blue-600">
                 PROJECT {p.number}
               </span>
-              <ArrowUpRight
+              <a href="https://africa-map-builder.vercel.app/"><ArrowUpRight
                 size={18}
                 className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
+              /></a>
             </div>
             <h2 className="mt-8 text-2xl font-blue-600 text-blue-800 font-bold">{p.title}</h2>
             <p className="mt-1 text-xs font-black uppercase tracking-[0.18em] text-black/40">
