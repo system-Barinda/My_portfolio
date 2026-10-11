@@ -1,0 +1,45 @@
+[
+  {
+    "id": "rp-tumba-information-technology",
+    "title": "Information Technology — Year 3",
+    "issuer": "RP-Tumba College",
+    "date": "In progress",
+    "category": "education",
+    "description": "Third-year Information Technology student (Reg. 24RP08563) with a software engineering focus."
+  },
+  {
+    "id": "thegym-software-engineering-training",
+    "title": "Software Engineering Training",
+    "issuer": "TheGym Rwanda",
+    "category": "certificate",
+    "description": "Hands-on training in backend and frontend development, API design, testing and Git workflows."
+  },
+  {
+    "id": "tss-mutovu-software-development",
+    "title": "Software Development Foundations",
+    "issuer": "TSS-Mutovu",
+    "category": "education",
+    "description": "Programming fundamentals and first applications."
+  },
+  {
+    "id": "portrait-professional",
+    "title": "Professional portrait",
+    "issuer": "System Sylvere Barinda",
+    "category": "photo",
+    "file": "/images/system.jpg"
+  },
+  {
+    "id": "portrait-casual",
+    "title": "Portrait",
+    "issuer": "System Sylvere Barinda",
+    "category": "photo",
+    "file": "/images/barinda.jpeg"
+  },
+  {
+    "id": "portrait-landscape",
+    "title": "Profile photo",
+    "issuer": "System Sylvere Barinda",
+    "category": "photo",
+    "file": "/images/barinda_1.jpeg"
+  }
+]
