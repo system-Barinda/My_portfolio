@@ -1,4 +1,5 @@
 import {
+  Award,
   BriefcaseBusiness,
   Code2,
   Home,
@@ -14,6 +15,7 @@ export type Section =
   | "skills"
   | "projects"
   | "experience"
+  | "certificates"
   | "contact";
 
 export const nav: { id: Section; label: string; icon: LucideIcon }[] = [
@@ -22,6 +24,7 @@ export const nav: { id: Section; label: string; icon: LucideIcon }[] = [
   { id: "skills", label: "Skills", icon: Zap },
   { id: "projects", label: "Projects", icon: Code2 },
   { id: "experience", label: "Experience", icon: BriefcaseBusiness },
+  { id: "certificates", label: "Certificates", icon: Award },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 

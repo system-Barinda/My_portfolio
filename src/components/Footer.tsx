@@ -5,6 +5,7 @@ import type { Section } from "../navigation";
 const links: { id: Section; label: string }[] = [
   { id: "about", label: "About" },
   { id: "projects", label: "Work" },
+  { id: "certificates", label: "Certificates" },
   { id: "contact", label: "Contact" },
 ];
 

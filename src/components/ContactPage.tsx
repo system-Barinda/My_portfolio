@@ -124,7 +124,7 @@ export default function ContactPage() {
   };
 
   return (
-    <Page eyebrow="05 / Contact" title="Let's build something useful.">
+    <Page eyebrow="06 / Contact" title="Let's build something useful.">
       <div className="grid gap-6 lg:grid-cols-[.75fr_1.25fr]">
         <aside className="flex flex-col rounded-2xl bg-blue-600 p-6 text-white md:p-7">
           <p className="text-base leading-7 text-white/85">

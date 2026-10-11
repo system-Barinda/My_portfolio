@@ -6,7 +6,7 @@ A two-panel, recruiter-focused portfolio built with **React + TypeScript + Vite 
 - Fixed desktop two-panel layout: navigation on the left, the selected section on the right (the content panel scrolls internally when needed).
 - Shareable section URLs via hash (`/#projects`, `/#contact`, ...).
 - Responsive mobile navigation drawer.
-- Sections: Overview (hero), About, Skills (grouped), Projects (3 case-study cards with previews), Experience & achievements, Contact.
+- Sections: Overview (hero), About, Skills (grouped), Projects (3 case-study cards with previews), Experience & achievements, Certificates & awards, Contact.
 - All content lives in `src/data/portfolio.ts`; reusable UI lives in `src/components/ui/`.
 - Contact form with client-side validation, EmailJS delivery, and a `mailto:` fallback.
 - Tailwind CSS v4 through `@tailwindcss/vite` — no component CSS files.
@@ -35,6 +35,16 @@ Edit `src/data/portfolio.ts`:
 - `projects[].image` — replace the SVG previews in `public/images/projects/` with real screenshots
 
 Add your CV as `public/cv.pdf` — the "Download CV" buttons link to it.
+
+## Certificates, awards & photos
+The Certificates section lists items from `src/data/certificates.json` with category filters (Certificates, Awards, Education, Photos), a full-screen viewer and a download button for each item.
+
+**Add an item (local only):**
+1. Run `npm run dev` and open `/#certificates`.
+2. Click **Add certificate**, choose a JPG, PNG, WEBP or PDF (max 10 MB) and fill in the details.
+3. The file is saved to `public/certificates/` and the entry is added to `src/data/certificates.json`. Commit both to publish.
+
+The upload and delete buttons only appear on the dev server; the deployed site is view and download only. You can also edit `certificates.json` by hand — leave out `file` to show a "coming soon" card.
 
 ## Contact form (EmailJS)
 1. Create a service and template at https://dashboard.emailjs.com. The template receives `from_name`, `reply_to`, `subject` and `message`.
