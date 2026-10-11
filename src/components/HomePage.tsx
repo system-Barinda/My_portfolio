@@ -1,66 +1,91 @@
-import { ArrowUpRight, Sparkles } from "lucide-react";
-import { Section, Page } from "../App";
-import { profile } from "../data/portfolio";
+import { ArrowUpRight, Download, MapPin } from "lucide-react";
+import type { Section } from "../navigation";
+import { profile, projects, skillGroups } from "../data/portfolio";
+import SocialLinks from "./ui/SocialLinks";
 
-function Stat({ value, label }: { value: string; label: string }) {
+const technologyCount = skillGroups.reduce((n, g) => n + g.items.length, 0);
+
+const stats = [
+  { value: "Year 3", label: "IT student" },
+  { value: String(projects.length).padStart(2, "0"), label: "Featured projects" },
+  { value: `${technologyCount}+`, label: "Technologies" },
+];
+
+export default function HomePage({
+  onSelect,
+}: {
+  onSelect: (s: Section) => void;
+}) {
   return (
-    <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-md">
-      <p className="text-2xl font-black text-slate-900">{value}</p>
-      <p className="mt-1 text-sm text-slate-600">{label}</p>
-    </div>
-  );
-}
-
-export default function HomePage({ onSelect }: { onSelect: (s: Section) => void }) {
-  return (
-    <Page
-      eyebrow="Software Engineer / Rwanda"
-      title="I build software that solves real problems."
-    >
-      <div className="grid h-full gap-5 lg:grid-cols-[1.4fr_.6fr]">
-        <div className="flex flex-col justify-between rounded-2xl border border-gray-400 bg-white p-6 text-white shadow-xl md:p-9">
-          <div>
-            <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black">
-              SB
-            </div>
-            <p className="max-w-2xl leading-8 text-slate-800 md:text-[20px]">
-              {profile.bio}
-            </p>
-             <p className="mt-5 max-w-2xl  leading-8 text-slate-800 md:text-[20px]">
-              {profile.bio_1}
-            </p>
-            <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-800 md:text-[20px]">
-              {profile.bio_2}
-            </p>
-
+    <div className="h-full overflow-y-auto px-5 py-8 md:px-10 md:py-10">
+      <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-[1.35fr_.65fr]">
+        <div>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-600/20 bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-500 opacity-60 motion-reduce:hidden" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-600" />
+              </span>
+              {profile.availability}
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+              <MapPin size={14} aria-hidden="true" /> {profile.location}
+            </span>
           </div>
+
+          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+            {profile.name} · {profile.role}
+          </p>
+          <h1 className="mt-3 text-4xl font-black leading-[1.05] tracking-tight text-balance text-slate-950 md:text-5xl xl:text-6xl">
+            {profile.headline}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            {profile.summary}
+          </p>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <button
+              type="button"
               onClick={() => onSelect("projects")}
-              className="flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-black hover:bg-blue-700"
+              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              View my work <ArrowUpRight size={16} />
+              View projects <ArrowUpRight size={16} aria-hidden="true" />
             </button>
-            <button
-              onClick={() => onSelect("contact")}
-              className=" text-black/75 rounded-xl border border-gray-400 px-5 py-3 text-sm font-black hover:bg-gray-200"
+            <a
+              href={profile.cvUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-900 transition hover:border-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              Let's talk
-            </button>
+              <Download size={16} aria-hidden="true" /> Download CV
+            </a>
           </div>
+
+          <SocialLinks className="mt-8" />
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
-          <Stat value="02" label="Featured projects" />
-          <Stat value="IT" label="RP-Tumba College" />
-          <div className="rounded-2xl border border-black/10 bg-blue-600 p-6 text-white shadow-lg">
-            <Sparkles size={21} />
-            <p className="mt-8 text-sm font-bold leading-6">
-              Focused on backend engineering, APIs, testing and clean
-              architecture.
-            </p>
-          </div>
+
+        <div className="relative mx-auto w-full max-w-xs lg:max-w-none">
+          <div className="absolute -inset-3 -z-10 rotate-3 rounded-[2rem] bg-blue-600/90" />
+          <img
+            src={profile.photo}
+            alt={profile.name}
+            className="aspect-[4/5] w-full rounded-[1.75rem] border-4 border-white object-cover shadow-2xl"
+          />
         </div>
       </div>
-    </Page>
+
+      <dl className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-3">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+          >
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+              {s.label}
+            </dt>
+            <dd className="mt-2 text-3xl font-black text-slate-950">{s.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }

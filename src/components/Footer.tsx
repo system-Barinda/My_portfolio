@@ -1,53 +1,28 @@
-import { Mail, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { profile } from "../data/portfolio";
-import { Section } from "../App";
-import {
-  FaUser,
-  FaBriefcase,
-  FaAddressBook,
-  FaEnvelope,
-  FaDownload,
-} from "react-icons/fa";
+import type { Section } from "../navigation";
+
+const links: { id: Section; label: string }[] = [
+  { id: "about", label: "About" },
+  { id: "projects", label: "Work" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Footer({ onSelect }: { onSelect: (s: Section) => void }) {
   return (
-    <footer className="flex min-h-14 shrink-0 items-center justify-between border-t border-black/10 bg-white px-5 py-3 md:px-8">
-      <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-black/45">
-        <span>© {new Date().getFullYear()} System Sylvere Barinda</span>
+    <footer className="flex min-h-14 shrink-0 items-center justify-between gap-4 border-t border-slate-200 bg-white px-5 py-3 text-[11px] font-bold uppercase tracking-wider md:px-8">
+      <span className="text-slate-500">
+        © {new Date().getFullYear()} {profile.name}
+      </span>
+      <div className="hidden items-center gap-5 text-slate-700 md:flex">
+        {links.map((l) => (
+          <button key={l.id} type="button" onClick={() => onSelect(l.id)} className="uppercase hover:text-blue-600">
+            {l.label}
+          </button>
+        ))}
       </div>
-      <div className="hidden items-center gap-5 text-[10px] text-slate-900 font-bold uppercase tracking-wider md:flex">
-        <button
-          onClick={() => onSelect("about")}
-          className="hover:text-blue-600"
-        >
-          <FaUser size={12} /> About
-        </button>
-        <button
-          onClick={() => onSelect("projects")}
-          className="hover:text-blue-600"
-        >
-          <FaBriefcase size={12} />Work
-        </button>
-        <button
-          onClick={() => onSelect("contact")}
-          className="hover:text-blue-600"
-        >
-         <FaAddressBook size={12} /> Contact
-        </button>
-        <a
-          href={`mailto:${profile.email}`}
-          
-          className="flex items-center gap-1.5 hover:text-blue-600"
-        >
-          <Mail size={12} /> Email
-        </a>
-      </div>
-      <a
-        href="/cv.pdf"
-        download
-        className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider hover:text-blue-600"
-      >
-        <Download size={12} /> CV
+      <a href={profile.cvUrl} download className="flex items-center gap-1.5 text-slate-900 hover:text-blue-600">
+        <Download size={12} aria-hidden="true" /> CV
       </a>
     </footer>
   );
