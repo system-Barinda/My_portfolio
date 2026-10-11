@@ -29,6 +29,7 @@ function InfoCard({
 
 function ProfileImageSlider() {
   const images = [
+    "/images/system.jpg",
     "/images/barinda_1.jpeg",
     "/images/barinda.jpeg",
   ];
