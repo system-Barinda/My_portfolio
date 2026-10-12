@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, FileText, MapPin } from "lucide-react";
 import type { Section } from "../navigation";
 import { profile, projects, skillGroups } from "../data/portfolio";
 import SocialLinks from "./ui/SocialLinks";
@@ -53,10 +53,18 @@ export default function HomePage({
             </button>
             <a
               href={profile.cvUrl}
-              download
+              download={profile.cvFileName}
               className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-900 transition hover:border-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <Download size={16} aria-hidden="true" /> Download CV
+            </a>
+            <a
+              href={profile.cvUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-bold text-slate-600 transition hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            >
+              <FileText size={16} aria-hidden="true" /> View CV
             </a>
           </div>
 

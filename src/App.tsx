@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Menu } from "lucide-react";
+import { Download, Menu } from "lucide-react";
 import { isSection, nav, type Section } from "./navigation";
 import { profile } from "./data/portfolio";
 import Sidebar from "./components/Sidebar";
@@ -63,10 +63,19 @@ export default function App() {
             <p className="hidden text-xs font-bold uppercase tracking-[0.22em] text-slate-500 md:block">
               {activeLabel}
             </p>
-            <p className="flex items-center gap-3 text-xs font-semibold text-slate-500">
-              <span className="hidden sm:inline">Based in {profile.location}</span>
-              <span className="h-2.5 w-2.5 rounded-full bg-blue-600 shadow-[0_0_0_5px_rgba(37,99,235,0.12)]" />
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-3 text-xs font-semibold text-slate-500">
+                <span className="hidden sm:inline">Based in {profile.location}</span>
+                <span className="h-2.5 w-2.5 rounded-full bg-blue-600 shadow-[0_0_0_5px_rgba(37,99,235,0.12)]" />
+              </p>
+              <a
+                href={profile.cvUrl}
+                download={profile.cvFileName}
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-xs font-bold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700"
+              >
+                <Download size={14} aria-hidden="true" /> CV
+              </a>
+            </div>
           </header>
 
           <main key={active} className="min-h-0 flex-1 animate-[fade-in_.35s_ease-out] motion-reduce:animate-none">

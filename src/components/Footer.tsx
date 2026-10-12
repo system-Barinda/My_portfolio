@@ -22,7 +22,7 @@ export default function Footer({ onSelect }: { onSelect: (s: Section) => void })
           </button>
         ))}
       </div>
-      <a href={profile.cvUrl} download className="flex items-center gap-1.5 text-slate-900 hover:text-blue-600">
+      <a href={profile.cvUrl} download={profile.cvFileName} className="flex items-center gap-1.5 text-slate-900 hover:text-blue-600">
         <Download size={12} aria-hidden="true" /> CV
       </a>
     </footer>
