@@ -11,7 +11,7 @@ export default function CvPage() {
       title="Read my CV"
       intro="My full CV, right here in the browser. Scroll to read it, or download the PDF to keep a copy."
     >
-      <div className="z-10 mb-4 flex sm:sticky sm:top-0 sm:-mx-1 sm:mb-6 flex-col gap-4 rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-4 flex sm:mb-6 flex-col gap-4 rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-sm backdrop-blur sm:flex-row sm:items-center sm:justify-between">
         <div className="flex min-w-0 items-center gap-3">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
             <FileText size={22} aria-hidden="true" />
