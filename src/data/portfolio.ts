@@ -13,7 +13,8 @@ export const profile = {
   summary:
     "Software engineer focused on React + TypeScript interfaces and Java / Spring Boot APIs. I care about clean architecture, validated data, tested code and products that people actually enjoy using.",
   photo: "/images/system.jpg",
-  cvUrl: "/cv.pdf",
+  cvUrl: "/System_Sylvere_Barinda_Software_Engineer_CV.pdf",
+  cvFileName: "System_Sylvere_Barinda_Software_Engineer_CV.pdf",
   github: "https://github.com/system-Barinda",
   linkedin: "https://www.linkedin.com/",
 };

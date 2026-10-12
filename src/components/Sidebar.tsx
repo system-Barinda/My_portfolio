@@ -1,4 +1,4 @@
-import { ChevronRight, X } from "lucide-react";
+import { ChevronRight, Download, X } from "lucide-react";
 import { nav, type Section } from "../navigation";
 import { profile } from "../data/portfolio";
 import SocialLinks from "./ui/SocialLinks";
@@ -65,6 +65,13 @@ export default function Sidebar({ active, onSelect, mobileOpen, onClose }: Sideb
           </nav>
 
           <div className="mt-auto space-y-4 border-t border-slate-200 pt-5">
+            <a
+              href={profile.cvUrl}
+              download={profile.cvFileName}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white transition hover:bg-blue-600"
+            >
+              <Download size={16} aria-hidden="true" /> Download CV
+            </a>
             <div className="rounded-xl border border-slate-200 bg-white p-4">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
                 Availability

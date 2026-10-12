@@ -34,7 +34,7 @@ Edit `src/data/portfolio.ts`:
 - `projects[].github` / `projects[].demo` — repo and live demo links (cards show "Demo coming soon" when `demo` is empty)
 - `projects[].image` — replace the SVG previews in `public/images/projects/` with real screenshots
 
-Add your CV as `public/cv.pdf` — the "Download CV" buttons link to it.
+Your CV is `public/System_Sylvere_Barinda_Software_Engineer_CV.pdf`, linked from `profile.cvUrl` (header, sidebar, hero and footer buttons). To update it, replace that file with a PDF of the same name, or change `profile.cvUrl` and `profile.cvFileName`.
 
 ## Certificates, awards & photos
 The Certificates section lists items from `src/data/certificates.json` with category filters (Certificates, Awards, Education, Photos), a full-screen viewer and a download button for each item.
