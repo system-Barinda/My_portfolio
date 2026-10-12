@@ -6,6 +6,7 @@ const links: { id: Section; label: string }[] = [
   { id: "about", label: "About" },
   { id: "projects", label: "Work" },
   { id: "certificates", label: "Certificates" },
+  { id: "cv", label: "CV" },
   { id: "contact", label: "Contact" },
 ];
 

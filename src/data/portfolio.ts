@@ -15,6 +15,7 @@ export const profile = {
   photo: "/images/system.jpg",
   cvUrl: "/System_Sylvere_Barinda_Software_Engineer_CV.pdf",
   cvFileName: "System_Sylvere_Barinda_Software_Engineer_CV.pdf",
+  cvPages: ["/cv/page-1.webp", "/cv/page-2.webp"],
   github: "https://github.com/system-Barinda",
   linkedin: "https://www.linkedin.com/",
 };
