@@ -2,6 +2,7 @@ import {
   Award,
   BriefcaseBusiness,
   Code2,
+  FileText,
   Home,
   Mail,
   UserRound,
@@ -16,6 +17,7 @@ export type Section =
   | "projects"
   | "experience"
   | "certificates"
+  | "cv"
   | "contact";
 
 export const nav: { id: Section; label: string; icon: LucideIcon }[] = [
@@ -25,6 +27,7 @@ export const nav: { id: Section; label: string; icon: LucideIcon }[] = [
   { id: "projects", label: "Projects", icon: Code2 },
   { id: "experience", label: "Experience", icon: BriefcaseBusiness },
   { id: "certificates", label: "Certificates", icon: Award },
+  { id: "cv", label: "My CV", icon: FileText },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 

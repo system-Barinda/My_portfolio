@@ -10,6 +10,7 @@ import SkillsPage from "./components/SkillsPage";
 import ProjectsPage from "./components/ProjectsPage";
 import ExperiencePage from "./components/ExperiencePage";
 import CertificatesPage from "./components/CertificatesPage";
+import CvPage from "./components/CvPage";
 import ContactPage from "./components/ContactPage";
 
 const sectionFromHash = (): Section => {
@@ -40,6 +41,7 @@ export default function App() {
     projects: <ProjectsPage />,
     experience: <ExperiencePage />,
     certificates: <CertificatesPage />,
+    cv: <CvPage />,
     contact: <ContactPage />,
   };
 
