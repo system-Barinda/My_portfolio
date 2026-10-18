@@ -73,13 +73,13 @@ function CertificateCard({ item, onView, onDelete }: CardProps) {
         <button
           type="button"
           onClick={onView}
-          className="relative aspect-[4/3] overflow-hidden border-b border-slate-200 bg-slate-100"
+          className="relative aspect-4/3 overflow-hidden border-b border-slate-200 bg-slate-100"
           aria-label={`View ${item.title}`}
         >
           {media}
         </button>
       ) : (
-        <div className="relative aspect-[4/3] overflow-hidden border-b border-slate-200">{media}</div>
+        <div className="relative aspect-4/3 overflow-hidden border-b border-slate-200">{media}</div>
       )}
 
       <div className="flex flex-1 flex-col p-5">
@@ -185,7 +185,7 @@ export default function CertificatesPage() {
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div
-          className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0"
+          className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 scrollbar-none sm:mx-0 sm:flex-wrap sm:px-0"
           aria-label="Filter by category"
         >
           {filters.map((f) => {

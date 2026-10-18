@@ -49,7 +49,7 @@ export default function App() {
 
   return (
     <div className="h-dvh bg-blue-600 text-slate-950 md:p-4">
-      <div className="mx-auto flex h-full max-w-[1500px] overflow-hidden bg-white shadow-2xl md:rounded-2xl md:border md:border-black/10">
+      <div className="mx-auto flex h-full max-w-375 overflow-hidden bg-white shadow-2xl md:rounded-2xl md:border md:border-black/10">
         <Sidebar active={active} onSelect={select} mobileOpen={mobileMenu} onClose={() => setMobileMenu(false)} />
 
         <div className="flex min-w-0 flex-1 flex-col">

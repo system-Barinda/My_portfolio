@@ -59,7 +59,7 @@ export default function AboutPage() {
         <ImageSlider
           images={["/images/barinda_1.jpeg", "/images/barinda.jpeg", "/images/system.jpg"]}
           alt={`${profile.name} portrait`}
-          className="aspect-[4/5] lg:sticky lg:top-0"
+          className="aspect-4/5 lg:sticky lg:top-0"
         />
       </div>
     </Page>
