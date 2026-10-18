@@ -71,11 +71,11 @@ export default function HomePage({
         </div>
 
         <div className="relative mx-auto w-full max-w-xs lg:max-w-none">
-          <div className="absolute -inset-3 -z-10 rotate-3 rounded-[2rem] bg-blue-600/90" />
+          <div className="absolute -inset-3 -z-10 rotate-3 rounded-4xl bg-blue-600/90" />
           <img
             src={profile.photo}
             alt={profile.name}
-            className="aspect-[4/5] w-full rounded-[1.75rem] border-4 border-white object-cover shadow-2xl"
+            className="aspect-4/5 w-full rounded-[1.75rem] border-4 border-white object-cover shadow-2xl"
           />
         </div>
       </div>

@@ -110,7 +110,7 @@ export default function UploadCertificateDialog({ onClose, onUploaded }: UploadP
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[60] flex items-end justify-center bg-slate-950/70 backdrop-blur-sm sm:items-center sm:p-4"
+      className="fixed inset-0 z-60 flex items-end justify-center bg-slate-950/70 backdrop-blur-sm sm:items-center sm:p-4"
       onClick={(e) => e.target === e.currentTarget && !sending && onClose()}
     >
       <form

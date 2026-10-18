@@ -14,7 +14,7 @@ export default function Sidebar({ active, onSelect, mobileOpen, onClose }: Sideb
   return (
     <>
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-[280px] border-r border-slate-200 bg-slate-50 text-slate-950 shadow-2xl transition-transform duration-300 md:relative md:z-auto md:flex md:translate-x-0 md:flex-col md:shadow-none ${
+        className={`fixed inset-y-0 left-0 z-50 w-70 border-r border-slate-200 bg-slate-50 text-slate-950 shadow-2xl transition-transform duration-300 md:relative md:z-auto md:flex md:translate-x-0 md:flex-col md:shadow-none ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

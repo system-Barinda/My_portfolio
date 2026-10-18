@@ -7,7 +7,7 @@ import { projects, type Project } from "../data/portfolio";
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="aspect-[16/10] overflow-hidden border-b border-slate-200 bg-slate-100">
+      <div className="aspect-16/10 overflow-hidden border-b border-slate-200 bg-slate-100">
         <img
           src={project.image}
           alt={`${project.title} screenshot`}

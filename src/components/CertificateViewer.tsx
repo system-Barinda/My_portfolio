@@ -42,7 +42,7 @@ export default function CertificateViewer({ items, index, onClose, onNavigate }:
       role="dialog"
       aria-modal="true"
       aria-labelledby="viewer-title"
-      className="fixed inset-0 z-[60] flex flex-col bg-slate-950/95 text-white backdrop-blur-sm animate-[fade-in_.2s_ease-out] motion-reduce:animate-none"
+      className="fixed inset-0 z-60 flex flex-col bg-slate-950/95 text-white backdrop-blur-sm animate-[fade-in_.2s_ease-out] motion-reduce:animate-none"
     >
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3 sm:px-6">
         <div className="min-w-0">
